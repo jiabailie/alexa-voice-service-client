@@ -60,10 +60,8 @@ class ConnectionManager:
             ],
             boundary='boundary'
         )
-        headers = {
-            **authentication_headers,
-            'Content-Type': multipart_data.content_type
-        }
+        headers = {'Content-Type': multipart_data.content_type}
+        headers.update(**authentication_headers)
         stream_id = self.connection.request(
             'GET',
             '/v20160207/events',
@@ -122,10 +120,8 @@ class ConnectionManager:
             ],
             boundary='boundary',
         )
-        headers = {
-            **authentication_headers,
-            'Content-Type': multipart_data.content_type
-        }
+        headers = {'Content-Type': multipart_data.content_type}
+        headers.update(**authentication_headers)
         stream_id = self.connection.request(
             'POST',
             '/v20160207/events',
