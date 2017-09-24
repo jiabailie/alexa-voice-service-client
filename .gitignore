@@ -101,6 +101,3 @@ ENV/
 .mypy_cache/
 
 README.rst
-
-generate-refresh-token.txt
-test.py
