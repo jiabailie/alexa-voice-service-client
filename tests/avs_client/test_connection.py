@@ -71,7 +71,7 @@ def test_synchronise_device_state(
     manager, authentication_headers, device_state
 ):
     manager.create_connection()
-    manager.mock_response(status_code=204)
+    manager.mock_response(status_code=204 or status_code=200)
 
     manager.synchronise_device_state(
         authentication_headers=authentication_headers,
