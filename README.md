@@ -11,7 +11,8 @@
 
 ## Installation ##
 ```sh
-pip install avs_client
+sudo pip3 install avs_client
+sudo pip3 install typing
 ```
 
 ## Usage ##
